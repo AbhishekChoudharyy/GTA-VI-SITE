@@ -1,0 +1,6 @@
+.text-gradient-gta {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c, #1fc8db);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
