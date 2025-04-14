@@ -9,8 +9,25 @@ const CustomCursor = () => {
   const pos = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
 
   const [variant, setVariant] = useState("default");
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      const isTouch = window.innerWidth <= 768 || 'ontouchstart' in window;
+      setIsMobile(isTouch);
+    };
+
+    checkMobile(); // Initial check
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+
     document.body.style.cursor = "none";
 
     const style = document.createElement("style");
@@ -67,7 +84,9 @@ const CustomCursor = () => {
       gsap.ticker.remove();
       document.head.removeChild(style);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   const cursorStyle = {
     default: "h-3 w-3",
@@ -81,18 +100,15 @@ const CustomCursor = () => {
 
   return (
     <>
-      {/* Cursor Image */}
       <img
         ref={cursorRef}
-        src="./cursor.png" // Replace with your custom image
+        src="./cursor.png"
         alt="cursor"
         className={`pointer-events-none fixed z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out ${cursorStyle[variant]}`}
       />
-
-      {/* Trail */}
       <div
         ref={trailRef}
-        className={`pointer-events-none fixed z-[9998] -translate-x-1/2 -translate-y-1/2 rounded-full ring-2  transition-all duration-300 ease-out ${trailStyle[variant]}`}
+        className={`pointer-events-none fixed z-[9998] -translate-x-1/2 -translate-y-1/2 rounded-full ring-2 transition-all duration-300 ease-out ${trailStyle[variant]}`}
       />
     </>
   );
