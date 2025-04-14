@@ -52,7 +52,7 @@ const About = () => {
         {/* Image Section */}
         <div className="mask-clip-path about-image">
           <img
-            src="public/img/about bg.png"
+            src="img/about bg.png"
             alt="Background"
             className="absolute left-0 top-0 size-full object-cover opacity-100"
           />
