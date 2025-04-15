@@ -1,6 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .text-gradient-gta {
     background: linear-gradient(135deg, #ff4b2b, #ff416c, #1fc8db);
     -webkit-background-clip: text;
     color: transparent;
   }
+
+
+@keyframes heroFadeIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes navbarFadeIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.animate-heroFadeIn {
+  animation: heroFadeIn 1s ease-out forwards;
+}
+
+.animate-navbarFadeIn {
+  animation: navbarFadeIn 1s ease-out forwards;
+}
+
   
