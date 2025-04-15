@@ -56,41 +56,50 @@ const NavBar = () => {
   }, [isNavVisible]);
 
   useEffect(() => {
-    const body = document.body;
+    if (mobileMenuRef.current) {
+      if (isMenuOpen) {
+        mobileMenuRef.current.style.display = "flex";
+        
+        gsap.fromTo(
+          mobileMenuRef.current,
+          { x: "100%" },
+          { x: "0%", duration: 0.5, ease: "power3.out" }
+        );
+      } else {
+        gsap.to(mobileMenuRef.current, {
+          x: "100%",
+          duration: 0.5,
+          ease: "power3.in",
+          onComplete: () => {
+            mobileMenuRef.current.style.display = "none";
+          },
+        });
+      }
+    }
+  }, [isMenuOpen]);
+  
+  useEffect(() => {
+    let scrollY = 0;
   
     if (isMenuOpen) {
-      body.style.overflow = "hidden"; // 🚫 Disable scroll
-      mobileMenuRef.current.style.display = "flex";
-      gsap.fromTo(
-        mobileMenuRef.current,
-        { x: "100%" },
-        { x: "0%", duration: 0.5, ease: "power3.out" }
-      );
+      scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
     } else {
-      body.style.overflow = "auto"; // ✅ Enable scroll
-      gsap.to(mobileMenuRef.current, {
-        x: "100%",
-        duration: 0.5,
-        ease: "power3.in",
-        onComplete: () => {
-          if (mobileMenuRef.current) {
-            mobileMenuRef.current.style.display = "none";
-          }
-        },
-      });
+      const scrollYVal = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      window.scrollTo(0, parseInt(scrollYVal || '0') * -1);
     }
-  
-    // Clean up just in case
-    return () => {
-      body.style.overflow = "auto";
-    };
   }, [isMenuOpen]);
+  
+  
   
 
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 top-1 left-1 right-1 bottom-1 z-[1000] h-16 border-none transition-all duration-700 sm:inset-x-6"
+      className="fixed inset-x-0 top-0 z-[1000] h-16 border-none transition-all duration-700 sm:inset-x-6"
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
