@@ -15,30 +15,24 @@ This project serves as both a frontend development exercise and a tribute to the
 
 Follow these steps to set up the project locally:
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/your-username/gta6-website.git
-cd gta6-website
-```
-
-2. **Install dependencies**
+1. **Install dependencies**
 ```bash
 npm install
 ```
 
-3. **Run the development server**
+2. **Run the development server**
 ```bash
 npm run dev
 ```
 
 The app will start at `http://localhost:5173/` by default.
 
-4. **Build for production**
+3. **Build for production**
 ```bash
 npm run build
 ```
 
-5. **Preview the production build**
+4. **Preview the production build**
 ```bash
 npm run preview
 ```
