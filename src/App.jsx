@@ -60,43 +60,34 @@ function App() {
 
   return (
     <Router>
-      <CustomCursor />
+        <CustomCursor />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <div
-                className="animate-navbarFadeIn -translate-y-12 opacity-0 animate-delay-500 animate-fill-forwards"
-              >
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
                 <NavBar />
-              </div>
-              <div
-                className="animate-heroFadeIn translate-y-12 opacity-0 animate-delay-300 animate-fill-forwards"
-              >
                 <Hero />
-              </div>
-              
-              <About />
-              <Platform />
-              <BTS />
-              <Characters />
-              <Timeline />
-              <Features />
-              <Countdown2 />
-              <Contact />
-              <PreOrder />
-              <Footer />
-            </>
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/BTS" element={<BTS />} />
-        <Route path="/LAUNCHING" element={<Countdown2 />} />
-        <Route path="/features" element={<Features />} />
-        <Route path="/pre-order" element={<PreOrder />} />
-      </Routes>
+                <About />
+                <Platform />
+                <BTS/>
+                <Characters />
+                <Timeline/>
+                <Features />
+                <Countdown2 />
+                <Contact />
+                <PreOrder />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/BTS" element={<BTS />} />
+          <Route path="/LAUNCHING" element={<Countdown2 />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/pre-order" element={<PreOrder />} />
+        </Routes>
     </Router>
   );
 }
