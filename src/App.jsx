@@ -68,15 +68,16 @@ function App() {
           element={
             <>
               <div
-                className="animate-heroFadeIn translate-y-12 opacity-0 animate-delay-300 animate-fill-forwards"
-              >
-                <Hero />
-              </div>
-              <div
                 className="animate-navbarFadeIn -translate-y-12 opacity-0 animate-delay-500 animate-fill-forwards"
               >
                 <NavBar />
               </div>
+              <div
+                className="animate-heroFadeIn translate-y-12 opacity-0 animate-delay-300 animate-fill-forwards"
+              >
+                <Hero />
+              </div>
+              
               <About />
               <Platform />
               <BTS />
