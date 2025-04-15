@@ -14,10 +14,10 @@ const Characters = () => {
 
   // Array of images for the carousel
   const images = [
-    "img/character-1.png",
-    "img/character-2.png",
-    "img/character-3.png",
-    "img/character-4.png",
+    "img/character-1.webp",
+    "img/character-2.webp",
+    "img/character-3.webp",
+    "img/character-4.webp",
   ]
 
   // Initialize GSAP animations and create dissolve overlay

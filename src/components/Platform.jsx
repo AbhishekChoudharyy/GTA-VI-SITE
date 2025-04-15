@@ -31,7 +31,7 @@ const Platform = () => {
           transition={{ duration: 1, delay: 1 }}
         >
           <video
-            src="/videos/hero-4.mp4" // Replace with your actual path
+            src="/videos/hero-4.webm" // Replace with your actual path
             className="rounded-lg shadow-lg w-full max-w-4xl"
             autoPlay
             muted

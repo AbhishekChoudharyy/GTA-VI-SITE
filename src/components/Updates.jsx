@@ -97,7 +97,7 @@ const Updates = () => {
                 >
                     <img
                         ref={(el) => (imgRefs.current[1] = el)}
-                        src='https://a.storyblok.com/f/271652/1053x602/cf66707253/news-cover-4.png/m/'
+                        src='https://a.storyblok.com/f/271652/1053x602/cf66707253/news-cover-4.webp/m/'
                         alt='updates-2'
                         className='h-96 rounded-lg w-full object-cover border border-black hover:shadow-md transition-all'
                     />

@@ -41,7 +41,7 @@ const Countdown = () => {
       {/* Background Image with Blurred and Grayscale effect */}
       <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-[-1]" 
            style={{ 
-             backgroundImage: "url('img/character-3.png')",
+             backgroundImage: "url('img/character-3.webp')",
              filter: "blur(10px) grayscale(500%)" 
            }} />
       

@@ -140,7 +140,7 @@ const BTS = () => {
                             </div>
                             <h1 id='text-3d' className='ml-3 plain-heading special-font text-black text-[9rem] md:text-[16rem] leading-none text-left '>Lucia</h1>
                         </div>
-                        <img src='img/hero-girl.png' alt='card-2' className='object-cover object-center h-auto -mt-40 md:-mt-72' />
+                        <img src='img/hero-girl.webp' alt='card-2' className='object-cover object-center h-auto -mt-40 md:-mt-72' />
                     </div>
 
                     <div

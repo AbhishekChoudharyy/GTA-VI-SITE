@@ -43,7 +43,7 @@ function App() {
             style={{ width: `${counter}%` }} // Smooth transition on width change
           >
             <img
-              src="img/okie2.png" // Change path if needed
+              src="img/okie2.webp" // Change path if needed
               alt="Loading"
               className="h-full w-full object-cover"
             />
