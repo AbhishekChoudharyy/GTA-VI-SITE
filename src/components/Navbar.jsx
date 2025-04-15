@@ -190,7 +190,7 @@ const NavBar = () => {
                     ? "/"
                     : `/${item.toLowerCase().replace(" ", "-")}`
                 }
-                className="text-black font-zentry text-xl tracking-wide"
+                className="text-black font-zentry text-6xl "
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}
