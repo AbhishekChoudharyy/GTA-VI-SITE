@@ -11,7 +11,12 @@ const Footer = () => {
 
         <div className="font-circular-web flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-2">
           <p>© 2025 WebDrave. All rights reserved.</p>
-          <p>Made With ❤️ by <a href="webdrave.com"><u>WebDrave</u></a></p>
+          <p>
+            Made With ❤️ by{" "}
+            <a href="https://www.webdrave.com" target="_blank" rel="noopener noreferrer">
+              <u>WebDrave</u>
+            </a>
+          </p>
         </div>
       </div>
     </footer>
