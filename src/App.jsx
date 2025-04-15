@@ -61,13 +61,14 @@ function App() {
   return (
     <Router>
         <CustomCursor />
-        <NavBar />
+        
 
         <Routes>
           <Route
             path="/"
             element={
               <>
+                <NavBar />
                 <Hero />
                 <About />
                 <Platform />
