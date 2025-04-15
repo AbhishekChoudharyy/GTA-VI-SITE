@@ -60,20 +60,21 @@ function App() {
 
   return (
     <Router>
+      <div className="relative min-h-screen w-screen overflow-x-hidden">
         <CustomCursor />
+        <NavBar />
 
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <NavBar />
                 <Hero />
                 <About />
                 <Platform />
-                <BTS/>
+                <BTS />
                 <Characters />
-                <Timeline/>
+                <Timeline />
                 <Features />
                 <Countdown2 />
                 <Contact />
@@ -88,6 +89,7 @@ function App() {
           <Route path="/features" element={<Features />} />
           <Route path="/pre-order" element={<PreOrder />} />
         </Routes>
+      </div>
     </Router>
   );
 }
