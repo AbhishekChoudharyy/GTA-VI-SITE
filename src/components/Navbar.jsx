@@ -145,7 +145,7 @@ const NavBar = () => {
         {/* Mobile Sidebar Menu */}
         <div
           ref={mobileMenuRef}
-          className="fixed top-0 right-0 z-[9999] h-screen w-screen hidden flex-col px-6 py-10 backdrop-blur-xl bg-white/10 border-l border-white/20 shadow-2xl"
+          className="fixed top-0 right-0 z-[99999999] h-screen w-screen hidden flex-col px-6 py-10 backdrop-blur-xl bg-white/10 border-l border-white/20 shadow-2xl"
           style={{ transform: "translateX(100%)" }}
         >
           <div className="flex justify-end">
@@ -171,7 +171,7 @@ const NavBar = () => {
                     ? "/"
                     : `/${item.toLowerCase().replace(" ", "-")}`
                 }
-                className="text-[#ff5e5e] text-xl tracking-wide"
+                className="text-black font-zentry text-xl tracking-wide"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}
