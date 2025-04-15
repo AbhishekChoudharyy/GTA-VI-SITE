@@ -60,7 +60,6 @@ function App() {
 
   return (
     <Router>
-      <div className="relative min-h-screen w-screen overflow-x-hidden">
         <CustomCursor />
         <NavBar />
 
@@ -89,7 +88,6 @@ function App() {
           <Route path="/features" element={<Features />} />
           <Route path="/pre-order" element={<PreOrder />} />
         </Routes>
-      </div>
     </Router>
   );
 }
